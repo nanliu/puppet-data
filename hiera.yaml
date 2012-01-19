@@ -1,0 +1,12 @@
+---
+:backends: - yaml
+           - puppet
+
+:hierarchy: - %{certname}
+            - %{environment}
+            - common
+:yaml:
+    :datadir: %{confdir}/data
+
+:puppet:
+    :datasource: data
